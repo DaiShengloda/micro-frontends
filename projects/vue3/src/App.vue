@@ -1,18 +1,15 @@
 <template>
-  <div>
-    <tab-bar />
-    <div id="subapp-container"></div>
+  <div id="app">
+    <router-link to="/">home</router-link>
+    <router-link to="/about">about</router-link>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TabBar from './components/TabBar.vue'
 
 export default {
   name: 'App',
-  components: {
-    TabBar
-  }
 }
 </script>
 

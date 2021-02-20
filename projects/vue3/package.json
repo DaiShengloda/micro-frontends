@@ -1,16 +1,8 @@
 {
-  "name": "micro-frontends",
+  "name": "vue3",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "mainapp:install": "npm-run-all --parallel install:*",
-    "mainapp:start": "npm-run-all --parallel start:*",
-    "install:main": "yarn",
-    "start:main": "yarn start",
-    "install:vue3": "cd projects/vue3 && yarn",
-    "start:vue3": "cd projects/vue3 && yarn start",
-    "install:react17": "cd projects/react17 && yarn",
-    "start:react17": "cd projects/react17 && yarn start",
     "start": "vue-cli-service serve",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -18,9 +10,8 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "element-ui": "^2.15.0",
-    "qiankun": "^2.4.0",
-    "vue": "^2.6.11"
+    "vue": "^2.6.11",
+    "vue-router": "^3.5.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
@@ -29,7 +20,6 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "npm-run-all": "^4.1.5",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
