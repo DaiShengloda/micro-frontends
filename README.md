@@ -1,6 +1,6 @@
 # micro-frontends（微前端）
 
-基于qiankun从零搭建的一套微前端项目。主应用采用Vue，微应用包括Vue-cli3、react17。
+基于qiankun从零搭建的一套微前端项目。主应用采用Vue，微应用包括vue3、react17。
 
 ## 📚文献资料
 
