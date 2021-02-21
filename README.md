@@ -4,7 +4,8 @@
 
 ## 📚文献资料
 
-qiankun  https://qiankun.umijs.org/
+[qiankun](https://qiankun.umijs.org/)
+
 [从零搭建微前端项目](https://qiankun.umijs.org/)
 
 ## 🚗启动项目
