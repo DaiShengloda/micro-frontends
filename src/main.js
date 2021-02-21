@@ -16,7 +16,7 @@ new Vue({
 }).$mount('#mainapp-container')
 
 /**
- * step2 注册子应用
+ * step2 注册微应用
  */
 registerMicroApps(
     [
@@ -48,7 +48,7 @@ registerMicroApps(
 )
 
 /**
- * step3 设置默认进入子应用
+ * step3 设置默认进入微应用
  */
 setDefaultMountApp('/vue3')
 

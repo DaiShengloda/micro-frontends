@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 const Home = lazy(() => import('../components/Home'))
 const About = lazy(() => import('../components/About'))
 
-// function Layout() {
 const Layout: React.FC = () => {
     return (
         <Router basename={(window as any).__POWERED_BY_QIANKUN__ ? '/react17' : '/'}>
