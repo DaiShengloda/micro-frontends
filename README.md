@@ -6,7 +6,7 @@
 
 [qiankun](https://qiankun.umijs.org/)
 
-[从零搭建微前端项目](https://qiankun.umijs.org/)
+[从零搭建微前端项目](https://www.cnblogs.com/lodadssd/p/14426020.html)
 
 ## 🚗启动项目
 
