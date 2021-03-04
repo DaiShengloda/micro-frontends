@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
-import { registerMicroApps, start, setDefaultMountApp } from 'qiankun'
+import { registerMicroApps, start, setDefaultMountApp, initGlobalState } from 'qiankun'
 
 Vue.config.productionTip = false
 
@@ -36,16 +36,18 @@ registerMicroApps(
     {
 		beforeMount: [
 			app => {
-			console.log('[LifeCycle] before mount %c%s', 'color: green;', app.name);
+				console.log('mainapp: beforeMount', app.name);
 			},
 		],
-		afterUnmount: [
-			app => {
-			console.log('[LifeCycle] after unmount %c%s', 'color: green;', app.name);
-			},
-		]
+		afterUnmount: []
     }
 )
+
+const { onGlobalStateChange } = initGlobalState({iptValue: 'main-app'})
+onGlobalStateChange((state, prev) => {
+	// state: 变更后的状态; prev 变更前的状态
+	console.log('main-app onGlobalStateChange', state, prev)
+})  
 
 /**
  * step3 设置默认进入微应用
