@@ -82,7 +82,6 @@ if (!window.__POWERED_BY_QIANKUN__) {
 export async function bootstrap() {}
 
 export async function mount(props) {
-	console.log(`${props.name} mount`, props)
 	render(props)
 }
 

@@ -21,8 +21,8 @@ function render(props: any) {
 function initStore(props: any) {
     // 将setGlobalState方法绑定到类MainApp静态属性上
     MainApp.setGlobalState = props.setGlobalState ? props.setGlobalState : null
+    
     // 主应用状态变更同步到微应用
-
 	props.onGlobalStateChange &&
     props.onGlobalStateChange(
         (state: MainStoreModel, prev: MainStoreModel) => {
@@ -41,7 +41,6 @@ if (!(window as any).__POWERED_BY_QIANKUN__) {
 export async function bootstrap() {}
 
 export async function mount(props: any) {
-    console.log(`${props.name} mount`, props)
     render(props)
     initStore(props)
 }

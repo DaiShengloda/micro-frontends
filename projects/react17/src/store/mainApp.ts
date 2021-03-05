@@ -1,4 +1,4 @@
-import { observable, computed, action, autorun, reaction } from 'mobx'
+import { observable, computed, action, reaction } from 'mobx'
 import _ from 'lodash'
 import { MainStoreModel } from '../model/mainApp'
 

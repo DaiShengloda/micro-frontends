@@ -34,16 +34,12 @@ registerMicroApps(
 		},
 	],
     {
-		beforeMount: [
-			app => {
-				console.log('mainapp: beforeMount', app.name);
-			},
-		],
+		beforeMount: [],
 		afterUnmount: []
     }
 )
 
-const { onGlobalStateChange } = initGlobalState({iptValue: 'main-app'})
+const { onGlobalStateChange } = initGlobalState({iptValue: ''})
 onGlobalStateChange((state, prev) => {
 	// state: 变更后的状态; prev 变更前的状态
 	console.log('main-app onGlobalStateChange', state, prev)

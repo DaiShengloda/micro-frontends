@@ -1,3 +1,3 @@
 export interface MainStoreModel {
-    iptValue: string
+    iptValue?: string
 }
