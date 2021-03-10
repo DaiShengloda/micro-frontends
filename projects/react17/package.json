@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@rescripts/cli": "^0.0.16",
-    "@rescripts/rescript-use-babel-config": "^0.0.12",
+    "@rescripts/rescript-env": "^0.0.14",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -48,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^4.1.0"
   }
 }

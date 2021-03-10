@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { observer } from 'mobx-react'
 import { Input } from 'antd'
-import { mainApp } from '../../../store/mainApp'
+import { mainApp } from 'store/mainApp'
 
 const About: React.FC = observer(() => {
 
