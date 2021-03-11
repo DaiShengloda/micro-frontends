@@ -25,6 +25,7 @@ function render(props = {}) {
 	router = new VueRouter({
 		base: window.__POWERED_BY_QIANKUN__ ? '/vue3/' : '/',
 		mode: 'history',
+		// mode: 'abstract',
 		routes,
 	})
 	
