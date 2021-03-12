@@ -8,6 +8,8 @@
 
 [从零搭建微前端项目](https://www.cnblogs.com/lodadssd/p/14426020.html)
 
+[微前端的通信方案](https://www.cnblogs.com/lodadssd/p/14480412.html)
+
 ## 🚗启动项目
 
 ```
@@ -22,5 +24,4 @@ Visit `http://localhost:7999`.
 
 - react17下组件内部html模板会报“jsx”相关错误；
 - 各个微应用共享组件库；
-- 跨微应用通信；
 - 项目分开部署，包括测试、上线；
