@@ -24,7 +24,7 @@ registerMicroApps(
 			name: 'vue-app',
 			entry: '//localhost:8101',
 			container: '#subapp-container',
-			activeRule: '/vue3',
+			activeRule: '/vue',
 		},
 		{
 			name: 'react-app',
@@ -48,7 +48,7 @@ onGlobalStateChange((state, prev) => {
 /**
  * step3 设置默认进入微应用
  */
-setDefaultMountApp('/vue3')
+setDefaultMountApp('/vue')
 
 /**
  * step4 启动
