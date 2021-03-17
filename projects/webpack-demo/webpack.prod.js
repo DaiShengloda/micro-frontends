@@ -7,8 +7,7 @@ const common = require('./webpack.common')
 module.exports = merge(common, {
     mode: 'production',
     devtool: 'source-map',
-    // 压缩打包优化
-    optimization: {
+    optimization: {  //压缩打包优化
         usedExports: true,  //tree-shaking
         runtimeChunk: 'single',
         splitChunks: {  //防止重复
@@ -20,5 +19,5 @@ module.exports = merge(common, {
                 }
             }
         }
-    }
+    },
 })
