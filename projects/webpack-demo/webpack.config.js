@@ -7,11 +7,7 @@ function resolve(dir) {
     return path.join(__dirname, dir);
 }
 
-module.exports = env => {
-    console.log('...NODE_ENV...')
-    console.log(env.NODE_ENV)
-    console.log('...NODE_ENV...')
-    
+module.exports = () => {
     return {
         entry: {
             app: './src/index.js',

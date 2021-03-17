@@ -3,9 +3,7 @@ import '@/assets/style/style.css'
 import sg from '@/assets/images/sg.png'
 import { say } from '@/assets/js/util.js'
 
-if(process.env.NODE_ENV !==  'production') {
-    console.log('development mode')
-}
+console.log('NODE_ENV', process.env.NODE_ENV)
 
 function component() {
     let element = document.createElement('div');
