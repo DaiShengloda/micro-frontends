@@ -10,8 +10,7 @@ function resolve(dir) {
 
 module.exports =  {
     entry: {
-        app: './src/index.js',
-        // ts: './src/index.ts',
+        main: './src/index.js',
     },
     output: {
         filename: '[name].[contenthash].js',
@@ -39,7 +38,7 @@ module.exports =  {
                 test: /\.tsx?$/,
                 use: ['ts-loader'],
                 exclude: /node_modules/
-            }      
+            },
         ]
     },
     // 插件
