@@ -48,11 +48,11 @@ module.exports =  {
         new webpack.ProvidePlugin({  //预设全局依赖
             _: 'lodash'
         }),
-        new WorkboxPlugin.GenerateSW({
-            // 这些选项帮助快速启用 ServiceWorkers
-            // 不允许遗留任何“旧的” ServiceWorkers
-            clientsClaim: true,
-            skipWaiting: true
-        })
+        // new WorkboxPlugin.GenerateSW({
+        //     // 这些选项帮助快速启用 ServiceWorkers
+        //     // 不允许遗留任何“旧的” ServiceWorkers
+        //     clientsClaim: true,
+        //     skipWaiting: true
+        // })
     ],
 }
