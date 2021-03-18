@@ -13,7 +13,7 @@ module.exports =  {
         main: './src/index.js',
     },
     output: {
-        filename: '[name].[contenthash].js',
+        filename: '[name].[hash].js',
         chunkFilename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },

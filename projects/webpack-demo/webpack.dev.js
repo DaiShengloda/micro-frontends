@@ -11,6 +11,7 @@ module.exports = merge(common, {
     devServer: {  //本地服务
         contentBase: './dist',  //监听文件改动，自动编译
         hot: true,  //模块热替换
+        hotOnly: true
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()  //模块热替换

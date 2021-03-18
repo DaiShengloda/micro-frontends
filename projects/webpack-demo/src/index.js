@@ -30,22 +30,22 @@ function component() {
 let element = component();
 document.body.appendChild(element);  
 
-// if (module.hot) {
-//     module.hot.accept('@/assets/js/util.js', function() {
-//         console.log('Accepting the updated printMe module!');
-//         document.body.removeChild(element);
-//         element = component(); // Re-render the "component" to update the click handler
-//         element = component(); // 重新渲染 "component"，以便更新 click 事件处理函数
-//         document.body.appendChild(element);
-//     })
-// }
-
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/service-worker.js').then(registration => {
-            console.log('SW registered: ', registration)
-        }).catch(registrationError => {
-            console.log('SW registration failed: ', registrationError)
-        })
+if (module.hot) {
+    module.hot.accept('@/assets/js/util.js', function() {
+        console.log('Accepting the updated say!');
+        document.body.removeChild(element);
+        element = component(); // Re-render the "component" to update the click handler
+        element = component(); // 重新渲染 "component"，以便更新 click 事件处理函数
+        document.body.appendChild(element);
     })
 }
+
+// if ('serviceWorker' in navigator) {
+//     window.addEventListener('load', () => {
+//         navigator.serviceWorker.register('/service-worker.js').then(registration => {
+//             console.log('SW registered: ', registration)
+//         }).catch(registrationError => {
+//             console.log('SW registration failed: ', registrationError)
+//         })
+//     })
+// }
