@@ -7,7 +7,6 @@ console.log('...NODE_DEV...', process.env.NODE_ENV)
 
 module.exports = (env, ...args) => {
     // console.log('...env...', env)
-    // console.log('...args...', args)
     return merge(common, {
         mode: 'production',
         entry: {
@@ -23,6 +22,7 @@ module.exports = (env, ...args) => {
             new webpack.DefinePlugin({
                 "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)
             })
-        ]
+        ],
+        watch: true
     })
 }
