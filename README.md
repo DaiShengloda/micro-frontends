@@ -1,6 +1,6 @@
 # micro-frontends（微前端）
 
-基于qiankun从零搭建的一套微前端项目。主应用采用Vue，微应用包括vue、react17。
+基于qiankun从零搭建的一套微前端项目。主应用可自由切换vue、react，微应用包括vue、react17。
 
 ## 📚文献资料
 
@@ -13,9 +13,9 @@
 ## 🚗启动项目
 
 ```
-$ yarn install
-$ yarn mainapp:install
-$ yarn mainapp:start
+$ yarn microApp:install
+$ yarn mainReact:start  主应用是react
+$ yarn mainVue:start  主应用是vue
 ```
 
 Visit `http://localhost:7999`.

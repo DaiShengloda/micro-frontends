@@ -1,0 +1,55 @@
+{
+  "name": "micro-frontends",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "mainapp:install": "npm-run-all --parallel install:*",
+    "mainapp:start": "npm-run-all --parallel start:*",
+    "install:main": "npm install",
+    "start:main": "npm run start",
+    "install:vue": "cd ../../projects/vue && npm install",
+    "start:vue": "cd ../../projects/vue && npm run start",
+    "install:react17": "cd ../../projects/react17 && npm install",
+    "start:react17": "cd ../../projects/react17 && npm run start",
+    "start": "vue-cli-service serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "element-ui": "^2.15.0",
+    "qiankun": "^2.4.0",
+    "vue": "^2.6.11",
+    "vuex": "^3.6.2"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "npm-run-all": "^4.1.5",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

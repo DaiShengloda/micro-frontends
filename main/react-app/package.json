@@ -1,0 +1,52 @@
+{
+  "name": "react-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "antd": "^4.15.2",
+    "babel-plugin-import": "^1.13.3",
+    "customize-cra": "^1.0.0",
+    "npm-run-all": "^4.1.5",
+    "qiankun": "^2.4.0",
+    "react": "^17.0.2",
+    "react-app-rewired": "^2.1.8",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "mainapp:install": "npm-run-all --parallel install:*",
+    "mainapp:start": "npm-run-all --parallel start:*",
+    "install:main": "npm install",
+    "start:main": "npm run start",
+    "install:vue": "cd ../../projects/vue && npm install",
+    "start:vue": "cd ../../projects/vue && npm run start",
+    "install:react17": "cd ../../projects/react17 && npm install",
+    "start:react17": "cd ../../projects/react17 && npm run start",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-app-rewired eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
