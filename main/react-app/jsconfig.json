@@ -1,0 +1,10 @@
+{
+    "experimentalDecorators": true,
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": "./src/",
+        "paths": {
+            "widget/*" : ["widget/*"]
+        }
+    }
+}

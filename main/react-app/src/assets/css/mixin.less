@@ -1,0 +1,31 @@
+@c1: #E1251B;
+
+// 多行省略号
+.clamp(@line:2){
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: @line;
+	-webkit-box-orient: vertical;	
+}
+
+.flexbox(@jc:center, @ai:center, @ac:center, @fw:nowrap, @fd:row){
+	display: flex;
+	justify-content:@jc;
+	align-items:@ai;
+	align-content:@ac; 
+	flex-wrap:@fw;
+	flex-direction:@fd;
+}
+
+.bgcover(@size:cover){
+	background-size:@size; background-repeat: no-repeat; background-position: center center;
+}
+
+.shenglue{
+	overflow: hidden; text-overflow:ellipsis; white-space: nowrap;
+}
+
+.trans(@delay: .3s){
+	transition: @delay;
+}

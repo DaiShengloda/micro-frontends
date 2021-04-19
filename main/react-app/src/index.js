@@ -1,17 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from 'widget/App/AppView';
 import reportWebVitals from './reportWebVitals';
 import { registerMicroApps, start, setDefaultMountApp, initGlobalState } from 'qiankun';
+import { Provider } from 'mobx-react';
+import * as stores from 'store/Stores';
+import { ConfigProvider } from 'antd';
 
 /**
  * step1 初始化应用
  */
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ConfigProvider>
+    <Provider {...stores}>
+      <App/>
+    </Provider>
+  </ConfigProvider>,
   document.getElementById('root')
 );
 
@@ -48,12 +53,12 @@ console.log('main-app onGlobalStateChange', state, prev)
 /**
 * step3 设置默认进入微应用
 */
-setDefaultMountApp('/vue')
+// setDefaultMountApp('/vue')
 
 /**
 * step4 启动
 */
-start()
+// start()
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

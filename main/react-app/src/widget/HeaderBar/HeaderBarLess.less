@@ -1,0 +1,101 @@
+@import '~assets/css/common.less';
+
+.tophead {
+  height: @header_height;
+  background: #FFF;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  width: 100%;
+  padding-left: @sider_width;
+  font-size: 14px;
+  box-shadow: 0 1px 4px 0 rgba(0,21,41,0.12);
+  .collapsed{
+    display: inline-block;
+    height: @header_height;
+    line-height: @header_height;
+    font-size: 18px;
+    padding-left: 24px;
+  }
+  .headLeft {
+    float: left;
+    height: @header_height;
+    i{
+      margin-top: 16px;
+      float: left;
+    }
+    .headTitle {
+      width: @sider_width;
+      color: #001529;
+      font-weight: normal;
+      display: inline-block;
+      .text{
+        line-height: @header_height;
+      }
+    }
+  }
+  .headRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: @header_height;
+    width: 700px;
+    .right{
+      float: right;
+    }
+    .table{
+      display: table;
+    }
+    .row{
+      display: table-row;
+      float: left;
+    }
+    .cell{
+      display: table-cell;
+      vertical-align: middle;
+    }
+    .user {
+      height: @header_height;
+      line-height: @header_height;
+      float: left;
+      color: white;
+      img {
+        width: 24px;
+        height: 24px;
+        margin-top: 20px;
+        border-radius: 50%;
+        margin-right: 8px;
+        float: left;
+      }
+      a {
+        display: inline-block;
+        padding-right: 24px;
+        max-width: 240px;
+        color: #999;
+        float: left;
+      }
+      :global .ant-dropdown-link i {
+        padding-top: 6px;
+        top: 16px;
+        margin-left: 5px;
+        font-size: 16px;
+        color: #333;
+      }
+    }
+    .padRight{
+      padding-right: 10px;
+    }
+    .padLeft{
+      padding-left: 36px;
+    }
+  }
+}
+.envTips {
+  position: absolute;
+  top: 5px;
+  left: 346px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #e1251b;
+}
