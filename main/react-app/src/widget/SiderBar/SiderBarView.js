@@ -2,8 +2,10 @@ import React, {Component} from 'react';
 import { observer, inject } from 'mobx-react';
 import {withRouter, NavLink} from 'react-router-dom';
 import { filter } from 'lodash';
-import {Layout, Menu, Icon} from 'antd';
+import {Layout, Menu} from 'antd';
 import styles from './SiderBarLess.less';
+import LogoCol from 'assets/imgs/logo_col.png';
+import Logo from 'assets/imgs/logo.png';
 
 const {Sider} = Layout;
 const {SubMenu} = Menu;
@@ -24,7 +26,7 @@ const renderMenuItem = (menuArray) => {
       if(!item.icon){
         return null
       }
-      return item.icon.indexOf('icon')>-1 ? <i className={`iconfont ${item.icon}`} /> : <Icon type={item.icon} />
+      return item.icon()
     }
     if (item.children) {
       return (
@@ -35,7 +37,7 @@ const renderMenuItem = (menuArray) => {
     }
     return (
       <Menu.Item key={item.key}>
-        <NavLink to={item.url ? item.url : '#'}>
+        <NavLink to={item.url ? item.url : '/'}>
           {iconStyle()}
           <span>{item.name}</span>
         </NavLink>
@@ -185,7 +187,7 @@ class BarView extends Component {
         width={220}
       >
         <div className={styles.logo}>
-          <img src={collapsed ? `/assets/imgs/logo_col.png` : `/assets/imgs/logo.png`} alt="logo" />
+          <img src={collapsed ? LogoCol : Logo} alt="logo" />
         </div>
         <div className={styles.menuWrap}>
           <div className={styles.menuCont}>

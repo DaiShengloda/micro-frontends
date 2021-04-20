@@ -1,32 +1,39 @@
 // mobx的公共方法
+import React from 'react'
 import { observable } from 'mobx';
+import {PictureOutlined, HomeOutlined} from '@ant-design/icons';
+
 class AppStore {
   // 监视状态
   @observable state = { 
     menuList: [
       {
-        icon: "home",
+        icon: () => {
+          return <HomeOutlined />
+        },
         key: "1261285814095218691",
         name: "首页",
         parentId: "1261115795835095166",
         sortNo: 1,
-        url: "/",
+        url: "/private/home",
       },
       {
-        icon: "bar-chart",
+        icon: () => {
+          return <PictureOutlined />
+        },
         key: "1261285860548184147",
-        name: "数据统计",
+        name: "react应用",
         parentId: "1261115795835095166",
         sortNo: 2,
-        url: "/statistics",
+        url: "/private/react17",
         children: [
           {
             icon: "",
             key: "1261933093283072063",
-            name: "导购业绩统计",
+            name: "系统设置",
             parentId: "1261285860548184147",
             sortNo: 1,
-            url: "/statistics/shopAchievement/index",
+            url: "/private/react17/setting/index",
           },
           {
             icon: "",

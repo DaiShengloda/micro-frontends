@@ -10,9 +10,11 @@ import styles  from './HeaderBarLess.less';
 // 路由对象
 import {withRouter} from 'react-router-dom';
 // 引入antd的组件
-import {Menu, Icon, Dropdown, message, Modal} from 'antd';
+import {Menu, Dropdown, message, Modal} from 'antd';
+import {MenuUnfoldOutlined, MenuFoldOutlined} from '@ant-design/icons';
 // 样式管理工具方法，可以给标签动态添加多个className而不报错
 import cx from 'classnames';
+import Avatar from 'assets/imgs/avatar.png';
 
 const {confirm} = Modal;
 
@@ -79,15 +81,17 @@ class HeaderBarView extends Component {
     renderUserInfo() {
         return (
             <div className={styles.user}>
-                <Dropdown
+                {/* <Dropdown
                     getPopupContainer={() => document.getElementById('routerApp_headRight')}
                     overlay={ this.getDropDownMenu() }
-                    trigger={['hover']}>
+                    trigger={['hover']}
+                    placement="bottomRight"
+                > */}
                     <a className="ant-dropdown-link" href="#" style={{display: 'inline-block'}}>
-                        <img src={`/assets/imgs/avatar.png`}/>
+                        <img src={Avatar} />
                         <span style={{width: 120}}>{'超级管理者'}</span>
                     </a>
-                </Dropdown>
+                {/* </Dropdown> */}
             </div>
         )
     }
@@ -101,12 +105,11 @@ class HeaderBarView extends Component {
                 {/*整个头部视图的根节点*/}
                 <div className={styles.tophead} style={collapsed ? {paddingLeft: '80px'} : {}}>
                     {/* 头部左侧图标 */}
-                    <span className={styles.collapsed}>
-                        <Icon 
-                            className='trigger' 
-                            type={collapsed ? 'menu-unfold' : 'menu-fold'}
-                            onClick={(e) => this.props.toggle(e)}
-                        />
+                    <span className={styles.collapsed} onClick={(e) => this.props.toggle(e)}>
+                        {
+                            collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />
+
+                        }
                     </span>
                     {/*头部右侧视图*/}
                     <div className={styles.headRight} id="routerApp_headRight">

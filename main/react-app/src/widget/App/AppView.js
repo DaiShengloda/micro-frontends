@@ -1,7 +1,7 @@
-import styles from './AppLess.less'
-import { Button } from 'antd'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 import Layout from 'widget/Layout/LayoutView'
+import Setting from 'pages/Setting/SettingView';
 
 function App() {
 
@@ -12,12 +12,13 @@ function App() {
   }
 
   return (
-    <div className={styles.app}>
+    <div>
       {/* <Button onClick={() => handleClick({name: 'vue'})}>vue-app</Button>
       <Button onClick={() => handleClick({name: 'react17'})}>react-app</Button> */}
-      <Router>
+      <Router basename="/micro">
         <Switch>
-          <Route path="/" exact component={Layout} />
+          <Redirect exact path="/" to={{pathname: '/private'}}/>
+          <Route path="/private" component={Layout} />
         </Switch>
       </Router>
     </div>
