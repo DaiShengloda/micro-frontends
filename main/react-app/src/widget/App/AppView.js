@@ -15,7 +15,7 @@ function App() {
     <div>
       {/* <Button onClick={() => handleClick({name: 'vue'})}>vue-app</Button>
       <Button onClick={() => handleClick({name: 'react17'})}>react-app</Button> */}
-      <Router basename="/micro">
+      <Router basename="/lp">
         <Switch>
           <Redirect exact path="/" to={{pathname: '/private'}}/>
           <Route path="/private" component={Layout} />

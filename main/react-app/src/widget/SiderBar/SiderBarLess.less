@@ -64,38 +64,22 @@
   width: 16px;
 }
 
+.menuIcon {margin-right: 10px;}
+
 :global{
   .ant-menu{
-
-  }
-  .ant-menu-inline,.ant-menu-inline-collapsed{
-    border-right: 0
-  }
-  .ant-menu-inline-collapsed > .ant-menu-item .iconfont + span,
-  .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item .iconfont + span,
-  .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title .iconfont + span,
-  .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title .iconfont + span {
-    display: inline-block;
-    max-width: 0;
-    opacity: 0;
-  }
-  .ant-menu-item .iconfont,
-  .ant-menu-submenu-title .iconfont {
-    min-width: 14px;
-    margin-right: 10px;
-    font-size: 14px;
-  }
-
-  .ant-menu-inline>.ant-menu-item, .ant-menu-inline>.ant-menu-submenu>.ant-menu-submenu-title, .ant-menu-vertical-left>.ant-menu-item, .ant-menu-vertical-left>.ant-menu-submenu>.ant-menu-submenu-title, .ant-menu-vertical-right>.ant-menu-item, .ant-menu-vertical-right>.ant-menu-submenu>.ant-menu-submenu-title, .ant-menu-vertical>.ant-menu-item, .ant-menu-vertical>.ant-menu-submenu>.ant-menu-submenu-title{
-    height: 54px;
-    line-height: 54px;
-  }
-
-  .ant-menu-inline .ant-menu-item:not(:last-child), .ant-menu-vertical-left .ant-menu-item:not(:last-child), .ant-menu-vertical-right .ant-menu-item:not(:last-child), .ant-menu-vertical .ant-menu-item:not(:last-child) {
-    margin-bottom: 0px;
-  }
-  .ant-menu-inline .ant-menu-item, .ant-menu-inline .ant-menu-submenu-title, .ant-menu-vertical-left .ant-menu-item, .ant-menu-vertical-left .ant-menu-submenu-title, .ant-menu-vertical-right .ant-menu-item, .ant-menu-vertical-right .ant-menu-submenu-title, .ant-menu-vertical .ant-menu-item, .ant-menu-vertical .ant-menu-submenu-title{
-    margin-top: 0px;
-    margin-bottom: 0px;
+    padding: 0px;
+    list-style: none;
+    &>ul {
+      list-style: none;
+    }
+    .ant-menu-item, .ant-menu-submenu-title {
+      height: 54px;
+      line-height: 54px;
+      
+    }
+    .ant-menu-submenu .ant-motion-collapse-leave {
+      display: none;
+    }
   }
 }

@@ -23,7 +23,7 @@ function render(props = {}) {
 	const { container } = props
 
 	router = new VueRouter({
-		base: window.__POWERED_BY_QIANKUN__ ? '/vue/' : '/',
+		base: window.__POWERED_BY_QIANKUN__ ? '/lp/private/vue/' : '/',
 		mode: 'history',
 		routes,
 	})

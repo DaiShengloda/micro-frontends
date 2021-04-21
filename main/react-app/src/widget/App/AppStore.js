@@ -1,51 +1,59 @@
 // mobx的公共方法
 import React from 'react'
 import { observable } from 'mobx';
-import {PictureOutlined, HomeOutlined} from '@ant-design/icons';
+import {PictureOutlined, HomeOutlined, UserOutlined} from '@ant-design/icons';
 
 class AppStore {
   // 监视状态
   @observable state = { 
     menuList: [
       {
-        icon: () => {
-          return <HomeOutlined />
-        },
-        key: "1261285814095218691",
+        icon: () => <HomeOutlined />,
         name: "首页",
-        parentId: "1261115795835095166",
-        sortNo: 1,
         url: "/private/home",
+        key: '1'
       },
       {
-        icon: () => {
-          return <PictureOutlined />
-        },
-        key: "1261285860548184147",
-        name: "react应用",
-        parentId: "1261115795835095166",
-        sortNo: 2,
-        url: "/private/react17",
+        icon: () => <PictureOutlined />,
+        name: "商品",
+        url: "/private/react17/goods",
+        key: '2',
         children: [
           {
             icon: "",
-            key: "1261933093283072063",
-            name: "系统设置",
-            parentId: "1261285860548184147",
-            sortNo: 1,
-            url: "/private/react17/setting/index",
+            name: "商品列表",
+            url: "/private/react17/goods/list/index",
+            key: '2-1',
           },
           {
             icon: "",
-            key: "1261933114195871763",
-            name: "素材转化分析",
-            parentId: "1261285860548184147",
-            sortNo: 2,
-            url: "/statistics/sourceMaterial/index",
-          }
+            name: "商品标签",
+            url: "/private/react17/goods/label/index",
+            key: '2-2',
+          },
+        ]
+      },
+      {
+        icon: () => <UserOutlined />,
+        name: "导购管理",
+        url: "/private/vue/guide",
+        key: '3',
+        children: [
+          {
+            icon: "",
+            name: "会员列表",
+            url: "/private/vue/guide/customer/list",
+            key: '3-1',
+          },
+          {
+            icon: "",
+            name: "粉丝列表",
+            url: "/private/vue/guide/fan/list",
+            key: '3-2',
+          },
         ]
       }
-    ],
+    ]
   }
 }
 

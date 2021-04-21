@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { observer, inject } from 'mobx-react';
-import {withRouter, NavLink} from 'react-router-dom';
+import {withRouter, NavLink, Link} from 'react-router-dom';
 import { filter } from 'lodash';
 import {Layout, Menu} from 'antd';
 import styles from './SiderBarLess.less';
@@ -26,7 +26,7 @@ const renderMenuItem = (menuArray) => {
       if(!item.icon){
         return null
       }
-      return item.icon()
+      return <span className={styles.menuIcon}>{item.icon()}</span>
     }
     if (item.children) {
       return (
@@ -37,10 +37,10 @@ const renderMenuItem = (menuArray) => {
     }
     return (
       <Menu.Item key={item.key}>
-        <NavLink to={item.url ? item.url : '/'}>
+        <Link to={item.url ? item.url : '/'}>
           {iconStyle()}
           <span>{item.name}</span>
-        </NavLink>
+        </Link>
       </Menu.Item>
     )
   })
@@ -191,25 +191,17 @@ class BarView extends Component {
         </div>
         <div className={styles.menuWrap}>
           <div className={styles.menuCont}>
-            {/*自定义滚动条组件*/}
-            {/* <Scrollbars
-              ref={(e) => { this.scrollbar = e }}
-              renderTrackVertical={props => <div {...props} className={styles.trackVertical} />}
-              renderThumbVertical={props => <div {...props} className={styles.thumbVertical} />}
-            > */}
-              {/* 左侧菜单列表 */}
-              <Menu
-                mode="inline"
-                onClick={this.handleClick}
-                selectedKeys={[current]}
-                inlineIndent={24}
-                collapsed={collapsed}
-                {...openProps}
-              >
-                {0 !== this.siderBarStore.state.menuList.length && renderMenuItem(this.siderBarStore.state.menuList)}
-              </Menu>
-            {/* </Scrollbars> */}
-
+            {/* 左侧菜单列表 */}
+            <Menu
+              mode="inline"
+              inlineCollapsed={collapsed}
+              onClick={this.handleClick}
+              selectedKeys={[current]}
+              collapsed={collapsed}
+              {...openProps}
+            >
+              {0 !== this.siderBarStore.state.menuList.length && renderMenuItem(this.siderBarStore.state.menuList)}
+            </Menu>
           </div>
         </div>
       </Sider>

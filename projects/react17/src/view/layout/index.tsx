@@ -6,15 +6,11 @@ const About = lazy(() => import('../components/About'))
 
 const Layout: React.FC = () => {
     return (
-        <Router basename={(window as any).__POWERED_BY_QIANKUN__ ? '/react17' : '/'}>
-            <nav>
-                <Link to="/">Home</Link>
-                <Link to="/about">About</Link>
-            </nav>
+        <Router basename={(window as any).__POWERED_BY_QIANKUN__ ? '/lp/private/react17' : '/'}>
             <Suspense fallback={null}>
                 <Switch>
-                    <Route path="/" exact component={Home} />
-                    <Route path="/about" component={About} />
+                    <Route path="/goods/list/index" exact component={Home} />
+                    <Route path="/goods/label/index" component={About} />                                                                                                             
                 </Switch>
             </Suspense>
         </Router>

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
  // 路由对象
- import { withRouter, Switch, Redirect } from 'react-router';
+ import { withRouter, Switch, Redirect, Route } from 'react-router';
  import { Layout } from 'antd';
  import { getRouter } from 'router';//webpack中启用了别名，对应路径是：src/router
  import SiderBar from 'widget/SiderBar/SiderBarView';
  import HeaderBar from 'widget/HeaderBar/HeaderBarView';
  import styles from './LayoutLess.less';
  import { hot } from 'react-hot-loader';
- import Setting from 'pages/Setting/SettingView';
+ import NotFound from 'widget/NotFound/NotFoundView';
  const { Content } = Layout;
  
  @withRouter
@@ -51,11 +51,13 @@ import React, { Component } from 'react';
                 <Layout style={{'paddingLeft': collapsed?'80px':'220px',minHeight:'100vh'}}>
                     <HeaderBar collapsed={collapsed?1:0} toggle={e => this.toggle()}/>
                     <Content>
-                        <div className={styles.routerCss} id="subapp-container">
+                        <div className={styles.routerCss} >
                             <Switch>
                                 <Redirect exact path={path} to={{pathname: `${path}/home`}}/>
+                                {/* <Route component={NotFound}/> */}
                                 {getRouter()}
                             </Switch>
+                            <div id="subapp-container"></div>
                         </div>
                     </Content>
                 </Layout>
