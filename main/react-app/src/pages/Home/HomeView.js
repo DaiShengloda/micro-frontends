@@ -7,8 +7,8 @@ class Home extends Component {
 
     render() {
         return (
-            <div>
-                Home page
+            <div style={{display: 'flex',justifyContent: 'center',marginTop: '30px',fontSize: '30px'}}>
+                主应用页面
             </div>
         )
     }

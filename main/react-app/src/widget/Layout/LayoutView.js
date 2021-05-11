@@ -63,7 +63,7 @@ import React, { Component } from 'react';
                 </Layout>
             </Layout>
          )
-     }
+    }
  }
  
  export default hot(module)(LayoutView);

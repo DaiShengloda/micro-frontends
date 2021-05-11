@@ -38,13 +38,19 @@ if (!(window as any).__POWERED_BY_QIANKUN__) {
 }
 
 // 修改、导出微应用钩子
-export async function bootstrap() {}
+// 首次进入初始化
+export async function bootstrap() {
+    console.log('react17 bootstrap')
+}
 
+// 挂载
 export async function mount(props: any) {
+    console.log('react17 mount')
     render(props)
     initStore(props)
 }
 
+// 卸载
 export async function unmount(props: any) {
     const { container } = props;
     ReactDOM.unmountComponentAtNode(container ? container.querySelector('#root') : document.querySelector('#root'))

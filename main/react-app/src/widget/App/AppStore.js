@@ -15,7 +15,7 @@ class AppStore {
       },
       {
         icon: () => <PictureOutlined />,
-        name: "商品",
+        name: "React应用",
         url: "/private/react17/goods",
         key: '2',
         children: [
@@ -35,7 +35,7 @@ class AppStore {
       },
       {
         icon: () => <UserOutlined />,
-        name: "导购管理",
+        name: "Vue应用",
         url: "/private/vue/guide",
         key: '3',
         children: [
